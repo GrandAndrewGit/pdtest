@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row gy-5">
+        <div class="col-lg-6 offset-lg-3 col-12">
+            <div class="p-3">
+
+                {% if user.is_authenticated %}
+                <h1 class="text-center">You have already logged in</h1>
+                {% else %}
+                <br>
+                <h1 class="text-center">Log in</h1>
+                <br>
+                <form class="form gr-form" id="login_form" action="{% url 'login' %}" method="post">
+                    {% csrf_token %}
+                    <div class="form-group gr-form-group">
+                        <label class="gr-label">First name</label>
+                        <input type="text" name="first_name" id="first-name" value='{{ first_name }}' class="form-control">
+                    </div>
+                    <br>
+                    <div class="form-group gr-form-group">
+                        <label class="gr-label">Password</label>
+                        <input type="password" name="password" id="password"  class="form-control"> 
+                    </div>
+                    <div class="form-group gr-form-group text-center" id="errors-wrapper">
+                    {% if error %}
+                        <br>
+                        <mark>{{ error }}</mark>
+                    {% endif %}
+                    </div>
+                    <div class="form-group text-center">
+                        <br>
+                        <button type="submit" id="btn-submit" class="btn btn-primary btn-wider" value="Log-in">Log in</button>
+                    </div>
+                </form>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+<!-- Simple JS Form Validation. It validates length for example -->
+
+{% block custom_js %}
+<script type="text/javascript">
+    $('#btn-submit').click(function(e){
+        e.preventDefault();
+        var firstName= $('#first-name').val().length;
+        var password = $('#password').val().length;
+        if (firstName === 0 || password === 0) {
+            $( "#errors-wrapper" ).append("<br><mark>Inputs can't be empty!</mark>");
+        } else {
+            $('#login_form').submit();
+        }
+    });
+</script>
+{% endblock %}
+
+
+
+
+

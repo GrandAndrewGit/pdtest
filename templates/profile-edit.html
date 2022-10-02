@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row gy-5">
+        <div class="col-lg-6 offset-lg-3 col-12">
+            <div class="p-3">
+
+                {% if user.is_authenticated %}
+
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form }}
+                        <br>
+                        <button class="btn btn-primary my-4" type="submit">Save changes</button>
+                    </form>
+
+                {% else %}
+                    <h1 class="text-center">You need to login</h1>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+

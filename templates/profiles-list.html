@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load custom_tags %}
+
+{% block content %}
+    <div class="row gy-5">
+        <div class="col-lg-8 offset-lg-2 col-12">
+            <br>
+            <h1>List of profiles (from fixtures)</h1>
+                <br><br>
+                {% for profile in profiles %}
+                <div class="p-3">
+                    <div class="row">
+                        
+                        <div class="col-md-6 col-12">
+                            <h4><small class="text-muted">First name</small><br>{{ profile.first_name }}</h4>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <h4><small class="text-muted">Last name</small><br>{{ profile.last_name }}</h4>
+                        </div>
+                        <div class="col-12">
+                            {{ profile.biography }}
+                        </div>
+                        <div class="col-12">
+                            <br>
+                            <mark>{{ profile.contacts }}</mark>
+                        </div>
+                        <div class="col-12">
+                            <br>
+                            <a href="{% edit_link profile %}">Edit this object in admin panel</a>
+                        </div>
+                        
+                    </div>
+                </div>
+                <hr>
+                {% endfor %}
+            
+        </div>
+    </div>
+{% endblock %}

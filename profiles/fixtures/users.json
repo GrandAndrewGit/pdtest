@@ -1,0 +1,38 @@
+[
+    {
+      "model": "profiles.profile",
+      "pk": 2,
+      "fields": {
+        "first_name": "Alex",
+        "last_name": "Valelsky",
+        "date_of_birth": "2022-09-28",
+        "biography": "Some biography facts of Alex",
+        "contacts": "Contacts of ALex",
+        "password": "pbkdf2_sha256$260000$TuqLtegtSPgBiAnHaTVs9L$IwM3OaqcGtYZBZ6b9s28fKEuArhGIEgOjVte/5zj7MY="
+      }
+    },
+    {
+      "model": "profiles.profile",
+      "pk": 3,
+      "fields": {
+        "first_name": "Eve",
+        "last_name": "Demenova",
+        "date_of_birth": "2022-09-27",
+        "biography": "Some biography facts of Eve",
+        "contacts": "Contacts of Eve",
+        "password": "pbkdf2_sha256$260000$TuqLtegtSPgBiAnHaTVs9L$IwM3OaqcGtYZBZ6b9s28fKEuArhGIEgOjVte/5zj7MY="
+      }
+    },
+    {
+      "model": "profiles.profile",
+      "pk": 4,
+      "fields": {
+        "first_name": "Sergio",
+        "last_name": "Milano",
+        "date_of_birth": "2022-09-26",
+        "biography": "Some biography facts of Sergio",
+        "contacts": "Contacts of Sergio",
+        "password": "pbkdf2_sha256$260000$TuqLtegtSPgBiAnHaTVs9L$IwM3OaqcGtYZBZ6b9s28fKEuArhGIEgOjVte/5zj7MY="
+      }
+    }
+  ]

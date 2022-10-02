@@ -1,0 +1,6 @@
+Method: GET  ---  Url: /profiles/  ---   Exctime 0.0449
+Method: GET  ---  Url: /profiles/profile/  ---   Exctime 0.0146
+Method: GET  ---  Url: /profiles/login/?next=/profiles/profile/  ---   Exctime 0.0085
+Method: POST  ---  Url: /profiles/login/  ---   Exctime 0.2898
+Method: GET  ---  Url: /profiles/profile/  ---   Exctime 0.0071
+

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row gy-5">
+        <div class="col-lg-8 offset-lg-2 col-12">
+            <div class="p-3">
+                <h1>Profile page</h1>
+                {% if user.is_authenticated %}
+                <br>
+                <p>Profile info:</p>
+                <h4>{{ profile.first_name }} {{ profile.last_name }}</h4>
+                <h5>{{ profile.biography }}</h5>
+                <h5>{{ profile.contacts }}</h5>
+                {% else %}
+                <p>You must log in to see profile info</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
